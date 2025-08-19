@@ -1,4 +1,4 @@
-#include <GL/freeglut.h>
+#include <GL/glut.h>
 
 void display(void)
 {
