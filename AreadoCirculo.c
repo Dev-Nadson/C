@@ -2,7 +2,7 @@
 
 float areaO(float raio)
 {
-    float pi = 3.1416;
+    const float pi = 3.1416;
     return ((raio * raio) * pi);
 }
 
