@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 #define TAM 5
 
@@ -80,7 +79,6 @@ int main(void)
     create(&q);
     int option;
     int value;
-    system("cls");
 
     do
     {
