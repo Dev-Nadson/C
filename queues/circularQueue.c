@@ -3,24 +3,24 @@
 
 typedef struct
 {
-    int items[LEN], first, last, lenth;
+    int items[LEN], first, last, length;
 } Queue;
 
 void init(Queue *q)
 {
     q->first = 0;
     q->last = LEN - 1;
-    q->lenth = 0;
+    q->length = 0;
 }
 
 int isFullQueue(Queue *q)
 {
-    return q->lenth == LEN;
+    return q->length == LEN;
 }
 
 int isEmptyQueue(Queue *q)
 {
-    return q->lenth == 0;
+    return q->length == 0;
 }
 
 void makeQueue(Queue *q, int value)
@@ -33,7 +33,7 @@ void makeQueue(Queue *q, int value)
     {
         q->last = (q->last + 1) % LEN;
         q->items[q->last] = value;
-        q->lenth++;
+        q->length++;
         printf("%d Adicionado na fila!\n\n", value);
     }
 }
@@ -48,7 +48,7 @@ int endQueue(Queue *q)
     {
         int removed = q->items[q->first];
         q->first = (q->first + 1) % LEN;
-        q->lenth--;
+        q->length--;
         printf("%d Saiu da fila!\n\n", removed);
     }
 }
@@ -63,7 +63,7 @@ void showQueue(Queue *q)
     {
         printf("Fila: ");
         int i = q->first;
-        for (int index = 0; index < q->lenth; index++)
+        for (int index = 0; index < q->length; index++)
         {
             printf("%d - ", q->items[i]);
             i = (i + 1) % LEN;
