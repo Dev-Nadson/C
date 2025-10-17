@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 char Matriz[8][8][4];
 int l, c, i;
@@ -107,7 +106,7 @@ void FuncaoRef()
     Matriz[EstX][EstY][2] = ' ';
 }
 
-//Funções Andar
+// Funções Andar
 
 void AndarDireita()
 {
@@ -205,7 +204,7 @@ void AndarCima()
     }
 }
 
-//Funções Voltar
+// Funções Voltar
 
 void VoltarDireita()
 {
@@ -432,8 +431,6 @@ int main()
                 VoltarCima();
             }
 
-
-
             if (l < EstX)
             {
                 VoltarCima();
@@ -450,7 +447,6 @@ int main()
             {
                 VoltarDireita();
             }
-
 
         } while (((l != EstX && c != EstY) || (l != EstX || c != EstY)));
 
